@@ -230,63 +230,12 @@ $('.fa-heart').click(function(e){
 
 /* BEST SLIDE */
 
-// let slideWrapper = $('.best_content');
-// let container = $('.best > .best_content > .best_item > div');
-// let indicators = $('.best > .pagination_wrap > .pagination > li > button');
-// let nowIdx = 0;
-// let returnIdx = 0;
-
-
-// $(function(){
-  
-//   // 슬라이드 버튼 클릭
-//   indicators.on('click', function(e){
-//     e.preventDefault();
-
-//     nowIdx = indicators.index(this);
-
-//     indicators.eq(nowIdx).parent().addClass('on');
-//     indicators.eq(nowIdx).parent().siblings().removeClass('on');
-
-    
-//     container.animate({left:-312*nowIdx});
-//   });
-
-
-//   $('.best_category > li > a').on('click', function(e){
-//     indicators.eq(returnIdx).parent().addClass('on');
-//     indicators.eq(returnIdx).parent().siblings().removeClass('on');
-
-//     container.animate({left:0});
-//   });
-  
-// });
-
-
-
-
-
 let slideWrapper = $('.best_content');
 let container = $('.best > .best_content > .best_item > div');
 let indicators = $('.best > .pagination_wrap > .pagination > li > button');
 let nowIdx = 0;
 let returnIdx = 0;
 
-
-// $(function(){
-//   let firstChild = slideWrapper.firstElementChild;
-//   let lastChild = slideWrapper.lastElementChild;
-//   let clonedFirst = firstChild.cloneNode(true);
-//   let clonedLast = lastChild.cloneNode(true);
-  
-//   // Add copied Slides
-//   slideWrapper.appendChild(clonedFirst);
-//   slideWrapper.insertBefore(clonedLast, slideWrapper.firstElementChild);
-
-// });
-
-
-  
 
 $(function(){
   
@@ -301,7 +250,6 @@ $(function(){
 
     
     container.animate({left:-312*nowIdx});
-
   });
 
 
@@ -313,6 +261,12 @@ $(function(){
   });
   
 });
+
+
+
+
+
+
 
 
 
