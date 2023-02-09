@@ -19,6 +19,35 @@ html{
   'opsz' 48
 }
 
+.mymenu .page_color{
+    color: #AE9554;  
+    font-weight: bold; 
+}
+
+header .sub_nav .main_menu .sub_title .nav_menu_list .sub_list > li > .page_color{
+    color: #AE9554;
+    font-weight: bold;
+}
+
+header .sub_nav .sub_title .page_color_line {
+    border: 3px solid #AE9554;
+    box-sizing: border-box;
+}
+.menu_right .mymenu .search a > .fa-magnifying-glass {
+    color: #AE9554;
+}
+
+body .top_ct_wrapper .top .img_wrapper > div .shirts_ct a .page_color_line{
+    border: 3px solid #AE9554;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
 
 
 /* SEARCH BACKGROUND */
