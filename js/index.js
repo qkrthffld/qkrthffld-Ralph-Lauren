@@ -230,39 +230,37 @@ $('.fa-heart').click(function(e){
 
 /* BEST SLIDE */
 
-let slideWrapper = $('.best_content');
-let container = $('.best > .best_content > .best_item > div');
-let indicators = $('.best > .pagination_wrap > .pagination > li > button');
-let nowIdx = 0;
-let returnIdx = 0;
+// let slideWrapper = $('.best_content');
+// let container = $('.best > .best_content > .best_item > div');
+// let indicators = $('.best > .pagination_wrap > .pagination > li > button');
+// let nowIdx = 0;
+// let returnIdx = 0;
 
 
-$(function(){
+// $(function(){
   
-  // 슬라이드 버튼 클릭
-  indicators.on('click', function(e){
-    e.preventDefault();
+//   // 슬라이드 버튼 클릭
+//   indicators.on('click', function(e){
+//     e.preventDefault();
 
-    nowIdx = indicators.index(this);
+//     nowIdx = indicators.index(this);
 
-    indicators.eq(nowIdx).parent().addClass('on');
-    indicators.eq(nowIdx).parent().siblings().removeClass('on');
+//     indicators.eq(nowIdx).parent().addClass('on');
+//     indicators.eq(nowIdx).parent().siblings().removeClass('on');
 
     
-    container.animate({left:-312*nowIdx});
-  });
+//     container.animate({left:-312*nowIdx});
+//   });
 
 
-  $('.best_category > li > a').on('click', function(e){
-    indicators.eq(returnIdx).parent().addClass('on');
-    indicators.eq(returnIdx).parent().siblings().removeClass('on');
+//   $('.best_category > li > a').on('click', function(e){
+//     indicators.eq(returnIdx).parent().addClass('on');
+//     indicators.eq(returnIdx).parent().siblings().removeClass('on');
 
-    container.animate({left:0});
-  });
+//     container.animate({left:0});
+//   });
   
-});
-
-
+// });
 
 
 

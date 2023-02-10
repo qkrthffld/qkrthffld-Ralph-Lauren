@@ -249,6 +249,7 @@ function initfunction() {
 
 next.addEventListener('click', function () {
   //다음 버튼 눌렀을때
+  
   if (currentIdx <= slideCount - 1) {
     //슬라이드이동
     slides.style.left = -(currentIdx + 2) * (slideWidth + slideMargin) + 'px';
@@ -264,6 +265,7 @@ next.addEventListener('click', function () {
     currentIdx = -1;
   }
   currentIdx += 1;
+ 
 });
 
 
@@ -285,11 +287,16 @@ prev.addEventListener('click', function () {
 });
 
 
+let indicators = document.querySelector('.rc_pagnation > ul > li > button');
+let nowIdx = 0;
+//let sliderCount = slides.length;
 
 
+// indicators.addEventListener('click', function(){
+//   if(){
 
-
-
+//   }
+// });
 
 
 

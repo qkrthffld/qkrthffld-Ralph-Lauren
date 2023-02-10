@@ -86,39 +86,76 @@ function moveSlide(num){
 
 
 
+
 /* GIFT SLIDE */ 
-let giftPrev = $('.gift_prev'),
-giftAfter = $('.gift_next'),
-giftSlideNum = 0,
-giftSliderIdx = $('.gift_section_wrap > div').length,
-giftNavNum =0;
+// let giftPrev = $('.gift_prev'),
+// giftAfter = $('.gift_next'),
+// giftSlideNum = 0,
+// giftSliderIdx = $('.gift_section_wrap > div').length,
+// giftNavNum =0;
 
 
-// slide prev버튼
-giftPrev.click(function() {
-  if(giftSlideNum != 0){
-    moveSlide(giftSlideNum-1);
-  }else{
-    moveSlide(giftSliderIdx-1);
+// // slide prev버튼
+// giftPrev.click(function() {
+//   if(giftSlideNum != 0){
+//     moveSlide(giftSlideNum-1);
+//   }else{
+//     moveSlide(giftSliderIdx-1);
+//   }
+// });
+
+// // slide after버튼
+// giftAfter.click(function() {
+//   if(giftSlideNum != giftSliderIdx -1){
+//     moveSlide(giftSlideNum+1);    
+//   }else{
+//     moveSlide(0);
+//   }
+//   console.log('3333', giftSlideNum)
+// });
+
+// //슬라이드 이동 함수
+// function moveSlide(giftnum){
+//   //let newleft = num*50+'%';
+//   let Left = giftnum*-100+'%';
+//   $('.gift_section_wrap').css('left', Left);
+//   giftSlideNum = giftnum;
+//   $('.gift_change_num').text(giftSlideNum+1);
+//   $('.gift_total').removeClass('changed');
+// }
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("gift_ct");
+  var changeNum = document.getElementsByClassName("gift_change_num");
+  var totalNum = document.getElementsByClassName("gift_total");
+  //var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
   }
-});
+  // for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[slideIndex-1].style.display = "flex";  
+  //dots[slideIndex-1].className += " active";
+  countSlides()
+}
 
-// slide after버튼
-giftAfter.click(function() {
-  if(giftSlideNum != giftSliderIdx -1){
-    moveSlide(giftSlideNum+1);    
-  }else{
-    moveSlide(0);
-  }
-  console.log('3333', giftSlideNum)
-});
-
-//슬라이드 이동 함수
-function moveSlide(giftnum){
-  //let newleft = num*50+'%';
-  let Left = giftnum*-100+'%';
-  $('.gift_section_wrap').css('left', Left);
-  giftSlideNum = giftnum;
-  $('.gift_change_num').text(giftSlideNum+1);
-  $('.gift_total').removeClass('changed');
+function countSlides(){
+	$('.gift_change_num').text(slideIndex);
 }
