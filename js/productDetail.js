@@ -227,6 +227,9 @@ let slideMargin = 24; //슬라이드 끼리의 마진값
 makeClone(); // 처음이미지와 마지막 이미지 복사 함수
 initfunction(); //슬라이드 넓이와 위치값 초기화 함수
 
+let indicators = document.querySelector('.rc_pagnation > ul > li > button');
+let nowIdx = 0;
+
 
 
 function makeClone() {
@@ -265,13 +268,12 @@ next.addEventListener('click', function () {
     currentIdx = -1;
   }
   currentIdx += 1;
- 
+  console.log('1111',currentIdx);
 });
 
 
 prev.addEventListener('click', function () {
   //이전 버튼 눌렀을때
-  console.log(currentIdx);
   if (currentIdx >= 0) {
     slides.style.left = -currentIdx * (slideWidth + slideMargin) + 'px';
     slides.style.transition = `${0.5}s ease-out`;
@@ -284,18 +286,21 @@ prev.addEventListener('click', function () {
     currentIdx = slideCount;
   }
   currentIdx -= 1;
+  console.log('222',currentIdx);
 });
 
 
-let indicators = document.querySelector('.rc_pagnation > ul > li > button');
-let nowIdx = 0;
-//let sliderCount = slides.length;
+
+
+
+
+// let indicators = document.querySelector('.rc_pagnation > ul > li > button');
+// let nowIdx = 0;
+// let sliderCount = slides.length;
 
 
 // indicators.addEventListener('click', function(){
-//   if(){
-
-//   }
+  
 // });
 
 
