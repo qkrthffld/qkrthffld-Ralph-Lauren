@@ -231,10 +231,12 @@ $('.fa-heart').click(function(e){
 /* BEST SLIDE */
 
 // let slideWrapper = $('.best_content');
+// let slideContainer = $('.best > .best_content > .best_item');
 // let container = $('.best > .best_content > .best_item > div');
 // let indicators = $('.best > .pagination_wrap > .pagination > li > button');
 // let nowIdx = 0;
 // let returnIdx = 0;
+
 
 
 // $(function(){
@@ -261,6 +263,11 @@ $('.fa-heart').click(function(e){
 //   });
   
 // });
+
+
+
+
+
 
 
 
