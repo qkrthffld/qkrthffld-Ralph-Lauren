@@ -636,6 +636,10 @@ header .search_popup_wrap .popular .popular_category > a > .popular_text > div >
 .gift_section .gift_section_wrap .gift_ct .gift_text .gift_section_ct > div {
     position: relative;
 }
+.gift_section_ct > div > a > div > div > p:first-child{
+    text-transform: uppercase;
+    padding-right: 11px;
+}
 /* .gift_section .gift_ct .gift_text .gift_section_ct > div::after{
     width: 278px;
     height: 420px;
